@@ -46,7 +46,7 @@
 	<properties>
  		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding> 
  		<siga.version>${project.version}</siga.version>
-		<hibernate.version>5.3.7.Final</hibernate.version>
+		<hibernate.version>5.4.24.Final</hibernate.version>
 		<version.jboss.bom.eap>6.2.0-redhat-1</version.jboss.bom.eap>
 		<spring.version>4.0.6.RELEASE</spring.version>
 		<siga.versao>develop</siga.versao>
@@ -376,19 +376,19 @@
 			<dependency>
 				<groupId>org.bouncycastle</groupId>
 				<artifactId>bcprov-jdk15on</artifactId>
-				<version>1.50</version>
+				<version>1.66</version>
 				<scope>provided</scope>
 			</dependency>
 			<dependency>
 				<groupId>org.bouncycastle</groupId>
 				<artifactId>bcmail-jdk15on</artifactId>
-				<version>1.50</version>
+				<version>1.66</version>
 				<scope>provided</scope>
 			</dependency>
 			<dependency>
 				<groupId>org.bouncycastle</groupId>
 				<artifactId>bcpkix-jdk15on</artifactId>
-				<version>1.50</version>
+				<version>1.66</version>
 				<scope>provided</scope>
 			</dependency>
 
@@ -414,7 +414,7 @@
 			<dependency>
 				<groupId>net.sf.jasperreports</groupId>
 				<artifactId>jasperreports</artifactId>
-				<version>6.12.2</version>
+				<version>6.17.0</version>
 				<!-- <exclusions>
 					<exclusion>
 						<groupId>org.bouncycastle</groupId>
@@ -444,7 +444,7 @@
 			<dependency>
 				<groupId>org.apache.poi</groupId>
 				<artifactId>poi</artifactId>
-				<version>3.12</version>
+				<version>4.1.1</version>
 			</dependency>
 			
 			<dependency>
@@ -628,7 +628,7 @@
 			<dependency>
 				<groupId>org.apache.tomcat</groupId>
 				<artifactId>jsp-api</artifactId>
-				<version>6.0.32</version>
+				<version>6.0.44</version>
 				<scope>provided</scope>
 			</dependency>
 
