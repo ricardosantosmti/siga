@@ -19,7 +19,7 @@
 		<dependency>
 			<groupId>joda-time</groupId>
 			<artifactId>joda-time</artifactId>
-			<version>2.3</version>
+			<version>2.10.13</version>
 		</dependency>
 		
 		<dependency>
@@ -232,30 +232,20 @@
 						<phase>package</phase>
 						<configuration>
 							<target>
-								<echo message="Starting static scanning process..." />
+								<echo message="Starting static scanning process..."/>
 								<path id="build.classpath">
-									<fileset
-										dir="${project.build.directory}/${project.build.finalName}/WEB-INF/lib"
-										includes="*.jar" />
-									<fileset
-										dir="${project.build.directory}/../../lib/static_scan_vraptor/"
-										includes="*.jar" />
+									<fileset dir="${project.build.directory}/${project.build.finalName}/WEB-INF/lib" includes="*.jar"/>
+									<fileset dir="${project.build.directory}/../../lib/static_scan_vraptor/" includes="*.jar"/>
 								</path>
-								<java classpathref="build.classpath"
-									classname="br.com.caelum.vraptor.scan.VRaptorStaticScanning"
-									fork="true">
-									<arg
-										value="${project.build.directory}/${project.build.finalName}/WEB-INF/web.xml" />
-									<classpath refid="build.classpath" />
-									<classpath
-										path="${project.build.directory}/${project.build.finalName}/WEB-INF/classes" />
+								<java classpathref="build.classpath" classname="br.com.caelum.vraptor.scan.VRaptorStaticScanning" fork="true">
+									<arg value="${project.build.directory}/${project.build.finalName}/WEB-INF/web.xml"/>
+									<classpath refid="build.classpath"/>
+									<classpath path="${project.build.directory}/${project.build.finalName}/WEB-INF/classes"/>
 								</java>
-								<war destfile="${project.build.directory}/${project.build.finalName}.war"
-									webxml="${project.build.directory}/${project.build.finalName}/WEB-INF/web.xml">
-									<fileset
-										dir="${project.build.directory}/${project.build.finalName}" />
+								<war destfile="${project.build.directory}/${project.build.finalName}.war" webxml="${project.build.directory}/${project.build.finalName}/WEB-INF/web.xml">
+									<fileset dir="${project.build.directory}/${project.build.finalName}"/>
 								</war>
-								<echo message="Static scanning process finished!" />
+								<echo message="Static scanning process finished!"/>
 							</target>
 						</configuration>
 						<goals>
